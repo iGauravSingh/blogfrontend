@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 
-const baseUrl = 'http://localhost:4000/post'
+const baseUrl = 'https://blogback-iz7w.onrender.com/post'
 
 export const postSlice = createApi({
     reducerPath: 'post',

@@ -1,7 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-
-const baseUrl = 'http://localhost:4000/user/'
+//'http://localhost:4000/user/'
+//https://blogback-iz7w.onrender.com/
+const baseUrl = 'https://blogback-iz7w.onrender.com/user/'
 
 export const userSlice = createApi({
     reducerPath: 'user',
