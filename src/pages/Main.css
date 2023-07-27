@@ -1,0 +1,19 @@
+.maincardcontainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.maincardleft {
+    width: 20%;
+    
+}
+
+.maincardright {
+    width: 20%;
+    
+}
+
+.maincardcenter {
+    width: 60%;
+    
+}

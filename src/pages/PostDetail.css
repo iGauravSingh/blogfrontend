@@ -1,0 +1,31 @@
+.postDetailContainer {
+    padding: 20px 0 20px 0;
+}
+
+.postDetailImage {
+    width: 100%;
+    height: 500px;
+
+}
+
+.postDetailUser {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+}
+.postDetailUserIm{
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+
+.postDetailUserImage {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+
+.postDetailLike{
+    padding-right: 20px;
+}

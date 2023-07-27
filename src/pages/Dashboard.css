@@ -1,0 +1,28 @@
+.dashboardContainer{
+    margin: 20px 10% 10px 10%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+.dashboardHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px groove rgb(216, 211, 211);
+}
+
+.dashboardHeader img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.dashboardHeaderUser {
+    padding-bottom: 10px;
+}
+
+.dashboardContent{
+
+}

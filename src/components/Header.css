@@ -1,0 +1,28 @@
+
+.headercontainer{
+    display: flex;
+    justify-content:space-between;
+    border-bottom: 1px solid dimgray;
+    box-shadow: 1px 3px 2px rgb(196, 192, 192);
+}
+
+.headersearchcontainer{
+    display: flex;
+    padding: 2px 0 3px 50px;
+}
+.headersearchcontainer h3{
+    padding-right: 30px;
+}
+.headersearchcontainer input {
+    background: url("../assets/search.png") top left     no-repeat;
+    height:30px;
+    padding-left:35px;
+}
+
+.headeruseraccountcontainer{
+    display: flex;
+    padding: 2px 50px 3px 0;
+}
+.headeruseraccountcontainer p{
+    padding-right: 30px;
+}
