@@ -8,7 +8,7 @@ import RightPanel from '../components/RightPanel'
 
 import { useUserPostsQuery } from '../store/postSlice'
 import UserPostList from '../components/UserPostList'
-import Footer from '../components/Footer'
+
 
 
 
@@ -54,7 +54,6 @@ const Dashboard = () => {
         <RightPanel />
       </div>
   </div>
-    <Footer />
   </div>
 
   return (

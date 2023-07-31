@@ -8,9 +8,8 @@ import './Main.css'
 
 import { useReadDataQuery } from "../store/postSlice"
 import PortalPractice from "../components/PortalPractice"
-import Footer from "../components/Footer"
 import { useEffect, useState } from "react"
-
+import Spinner from "../components/Spinner"
 
 const Main = () => {
 
@@ -18,11 +17,17 @@ const Main = () => {
   
   const [content,setContent] = useState(null)
 
+
   
 
   useEffect(()=>{
+    
     setContent(data)
-  },[data])
+  },[data,isLoading])
+
+  if(isLoading){
+    return <Spinner />
+  }
   
   return (
     <div>
@@ -39,7 +44,7 @@ const Main = () => {
           <RightPanel />
         </div>
     </div>
-    <Footer />
+    
     </div>
   )
 }

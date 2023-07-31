@@ -5,7 +5,7 @@ import './PostDetail.css'
 import LeftPanel from '../components/LeftPanel'
 import RightPanel from '../components/RightPanel'
 import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Spinner from '../components/Spinner'
 
 
 import LikeCount from '../components/LikeCount'
@@ -22,8 +22,12 @@ const PostDetail = () => {
     //console.log(data)
     
 
-    console.log(mainData)
+    //console.log(mainData)
     
+    if(isLoading){
+      return <Spinner />
+    }
+
 
   
 
@@ -65,7 +69,7 @@ const PostDetail = () => {
       <RightPanel />
     </div>
 </div>
-    <Footer />
+    
 </div>
   )
 }

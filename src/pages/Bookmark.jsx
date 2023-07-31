@@ -3,7 +3,7 @@ import { Link,useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
 import LeftPanel from '../components/LeftPanel'
 import RightPanel from '../components/RightPanel'
-import Footer from '../components/Footer'
+
 
 
 const Bookmark = () => {
@@ -34,7 +34,7 @@ const Bookmark = () => {
           <RightPanel />
         </div>
     </div>
-    <Footer />
+    
     </div>
 
   return (

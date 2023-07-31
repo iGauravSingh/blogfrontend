@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import ImageUp from '../components/ImageUp'
-
+import Button from '../components/Button'
 import { useCreatePostMutation } from '../store/postSlice'
 import Header from '../components/Header'
 import { useNavigate } from 'react-router-dom'
+import './PostForm.css'
 
 
 const PostForm = () => {
@@ -17,7 +18,7 @@ const PostForm = () => {
     const [title,setTitle] = useState('')
     const [discription,setdiscription] = useState('')
     const [tags,setTags] = useState('')
-    const [imgUrl,setImgUrl] = useState('')
+    const [imgUrl,setImgUrl] = useState(null)
     // cover image
 
 
@@ -67,27 +68,29 @@ const PostForm = () => {
   return (
     <>
     <Header />
-        <div style={{padding: '5% 0 0 20%'}}>
-        <div>
-            <h3>Create new Post</h3>
+        <div className='createPostContainer'>
+        <div className='createPostHeading'>
+            <h2>Create new Post</h2>
         </div>
-        <div>
-            <ImageUp setImgUrl={setImgUrl} />
+        <div className='createPostImageUpload'>
+            <ImageUp imgUrl={imgUrl} setImgUrl={setImgUrl} />
         </div>
-        <div>
-            <label htmlFor='title'>Title</label>
-            <input value={title} id='title' type='text' name="title" required onChange={handleTitleChange} />
-        </div>
-        <div>
-            <label htmlFor='discription'>Discription</label>
-            <input value={discription} id='discription' type='text' name="discription" required onChange={handlediscriptionChange} />
-        </div>
-        <div>
-            <label htmlFor='tags'>Tags</label>
-            <input value={tags} id='tags' type='text' name="tags" required onChange={handletagsChange} />
-        </div>
-        <div>
-            <button onClick={handleSubmit}>Submit</button>
+        <div className='createPostForm'>
+            <div className='alpha-item'>
+                <label htmlFor='title'>Title</label>
+                <input value={title} id='title' type='text' name="title" required onChange={handleTitleChange} />
+            </div>
+            <div className='alpha-item'>
+                <label htmlFor='tags'>Tags</label>
+                <input value={tags} id='tags' type='text' name="tags" required onChange={handletagsChange} />
+            </div>
+            <div className='postCreateDisc alpha-item'>
+                <label htmlFor='discription'>Discription</label>
+                <input value={discription} id='discription' type='text' name="discription" required onChange={handlediscriptionChange} />
+            </div>
+            <div style={{textAlign: 'center'}}>
+                <Button onClick={handleSubmit}>Submit</Button>
+            </div>
         </div>
     </div>
     </>

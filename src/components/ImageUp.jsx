@@ -2,7 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-function ImageUp({setImgUrl}) {
+function ImageUp({imgUrl,setImgUrl}) {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [res, setRes] = useState({});
@@ -12,9 +12,13 @@ function ImageUp({setImgUrl}) {
       setLoading(true);
       const data = new FormData();
       data.append("my_file", file);
-      const res = await axios.post("http://localhost:4000/upload", data);
+      const res = await axios.post("https://blogback-iz7w.onrender.com/upload", data);
       //console.log(res.data)
-      setImgUrl(res.data)
+      if(res){
+        setImgUrl(res.data)
+      } else {
+        setImgUrl(null)
+      }
       
     } catch (error) {
       alert(error.message);
@@ -50,9 +54,9 @@ function ImageUp({setImgUrl}) {
       </code>
       {file && (
         <>
-          <button onClick={handleUpload} className="btn-green">
+          {imgUrl ? <p style={{color: 'green'}}>Image uploaded</p> : <button onClick={handleUpload} className="btn-green">
             {loading ? "uploading..." : "upload to cloudinary"}
-          </button>
+          </button>}
         </>
       )}
     </div>
